@@ -1,0 +1,80 @@
+.guitarras-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr) ;
+    }
+
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.guitarra { 
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    align-items: center;
+
+    & .contenido {
+        padding: 1rem;
+    }
+
+    & h3 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    & .descripcion {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+
+    & .precio {
+      color: var(--primary);
+      font-size: 4rem;
+      margin: 0;
+      font-weight: 900;
+    }
+} 
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    & select {
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid var(--black);
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    & input[type="submit"] {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        border: none;
+        transition: ease 0.8s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--primary) ;
+        }
+    }
+}
+
