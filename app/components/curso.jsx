@@ -2,7 +2,7 @@
 
 export default function Curso({curso}) {
 
-    const { Contenido, titulo, imagen } = curso
+    const { contenido, titulo, imagen } = curso
   return (
     <section className="curso">
         <style jsx= "true">
@@ -16,7 +16,7 @@ export default function Curso({curso}) {
         <div className="contenedor curso-grid">
             <div className="contenido">
                 <h2 className="heading">{titulo}</h2>
-                <p className="texto">{Contenido}</p>
+                <p className="texto">{contenido}</p>
             </div>
         </div>
     </section>
